@@ -1,7 +1,7 @@
 <?php
 function connectDB(){
 	$servername = "localhost";
-	$username = "himassui_akbar";
+	$username = "himas";
 	$password = "asepwhite";
 	$dbname = "himassui_test";
 
