@@ -66,6 +66,11 @@
           <h2 class="form-signin-heading">Please insert your username and password</h2>
           <input name="username" class="form-control" placeholder="Username" required>
           <input type="password" name="password" class="form-control" placeholder="Password" required>
+          <input name="nama" class="form-control" placeholder="Nama" required>          
+          <input name="asal" class="form-control" placeholder="Asal Sekolah" required>
+          <input name="username" class="form-control" placeholder="Jurusan" required>
+          <input type = "email" name="email" class="form-control" placeholder="Email" required>
+          <input name="hp" class="form-control" placeholder="Nomor HP" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
      <span><?php echo $errormsg; ?> </span><br>
