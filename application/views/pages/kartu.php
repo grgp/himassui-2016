@@ -3,7 +3,7 @@
 		<center>
 			<title>#TestHimas</title>
 			<br><br>
-			<form action="imggen.php" method="post" enctype="multipart/form-data">
+			<form action="imggen" method="post" enctype="multipart/form-data">
 				<br>
 				Nama Lengkap:
 				<br>
