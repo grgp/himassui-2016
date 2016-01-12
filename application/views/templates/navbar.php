@@ -1,4 +1,5 @@
 <body id="page-top">
+
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,24 +10,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand page-scroll" href="#page-top">HIMASSUI2016</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="page-scroll" href="#about">About</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#services">Services</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#contact">Contact</a>
-          </li>
+          <li><a class="page-scroll" href="about">Panduan</a></li>
+          <li><a class="page-scroll" href="kartu">Buat Kartu</a></li>
+          <?php
+            if(!isset($_SESSION["userlogin"])) {
+              echo '<li><a class="page-scroll" href="registration">Register</a></li>';
+              echo '<li><a class="page-scroll" href="login">Login</a></li>';
+            } else {
+              echo '<li><a class="page-scroll" href="editprofile">Edit Profile</a></li>';
+              echo '<li><a class="page-scroll" href="logout">Logout</a></li>';
+            }
+          ?>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
