@@ -7,10 +7,9 @@
       $jurusan = "";
       $email = "";
       $hp = "";
+      $status = "";
+      $nomorujian = "";
       $username = $_SESSION["userlogin"];
-
-      getattribute($username);
-
          
      function connectDB() {
         $servername = "localhost";
@@ -34,8 +33,12 @@
           $jurusan = $row['jurusan'];
           $email = $row['email'];
           $hp = $row['hp'];
-    
-        }
+
+            if ($row['status'] === '0') {
+              $status = 'belum bayar';
+              $nomorujian = '-';
+            }
+          }
       }
 
   ?>
@@ -53,6 +56,30 @@
   <div class = "container">
     <form class="form-signin" action = "" method = "POST">
           <h2 class="form-signin-heading">Your Profile</h2>
+          <?php 
+          $conn = connectDB();
+          $sql = "SELECT * FROM peserta WHERE username='$username'";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+          $nama = $row['nama'];
+          $asal = $row['asal'];
+          $jurusan = $row['jurusan'];
+          $email = $row['email'];
+          $hp = $row['hp'];
+
+            if ($row['status'] === '0') {
+              $status = 'belum bayar';
+              $nomorujian = '-';
+            }
+          }
+          echo "<h2>".$nama."</h2>";
+          echo "<h2>".$asal."</h2>";
+          echo "<h2>".$jurusan."</h2>";
+          echo "<h2>".$email."</h2>";
+          echo "<h2>".$hp."</h2>";
+          echo "<h2>".$status."</h2>";
+          echo "<h2>".$nomorujian."</h2>";
+          ?>
     </form>
      
   </div>
