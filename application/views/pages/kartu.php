@@ -1,4 +1,3 @@
-	</head>
 	<body>
 		<center>
 			<title>#TestHimas</title>
@@ -20,7 +19,5 @@
 				<br><br>
 				<input class="btn btn-default" name="submit" type="submit" value="Submit">
 			</form>
-		<div id="footer">
-		  <i>PHP by <a href="http://www.awasisto.com">Andika Wasisto</a><br>HTML & CSS by <a href="http://www.veltastolkien.com">Velta Azizah</a><br><br>© Orion 2014</i>
-		</div>
 		</center>
+		

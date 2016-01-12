@@ -1,9 +1,9 @@
 <?php
 function connectDB(){
 	$servername = "localhost";
-	$username = "himas";
-	$password = "asepwhite";
-	$dbname = "himassui_test";
+	$username = "root";
+	$password = "";
+	$dbname = "himassui_to2016";
 
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
