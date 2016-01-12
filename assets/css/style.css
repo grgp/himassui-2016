@@ -19,7 +19,7 @@ html, body {
  
 .container .text-muted {
   margin: 20px 0;
-  color: #D2E5F7;
+/*  color: #D2E5F7; */
   font-weight: bold;
 }
 
@@ -30,6 +30,7 @@ html, body {
 
 /*....... NAVBAR .......*/
 
+/*
 .navbar {
 	background-color: #337AB7;
   font-weight: bold;
@@ -47,6 +48,7 @@ html, body {
   background-color: #4893D4;
   color: #f9f9f9;
 }
+*/
 
 /*....... FORMS .......*/
 
