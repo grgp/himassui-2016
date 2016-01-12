@@ -71,7 +71,11 @@
           <input type="password" name="password" class="form-control" placeholder="Password" required>
           <input name="nama" class="form-control" placeholder="Nama" required>          
           <input name="asal" class="form-control" placeholder="Asal Sekolah" required>
-          <input name="jurusan" class="form-control" placeholder="Jurusan" required>
+          <select name="jurusan" required>
+            <option value="Saintek" > Saintek </option>
+            <option value="Soshum"> Soshum </option>
+            <option value="Campuran"> Campuran </option>
+          </select>
           <input type = "email" name="email" class="form-control" placeholder="Email" required>
           <input name="hp" class="form-control" placeholder="Nomor HP" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>

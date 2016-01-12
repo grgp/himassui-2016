@@ -5,70 +5,13 @@ if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'
 		 * IMAGE PROCESSING SCRIPT *
 		 * * * * * * * * * * * * * */
 
-		$photoFileName = "tmp/" . basename($_FILES["selectedFile"]["name"]);
-		$uploadOk = 1;
-
-		// Check whether the uploaded file is a fake image to prevent site penetration
-		$check = getimagesize($_FILES["selectedFile"]["tmp_name"]);
-		if($check == false) {
-			echo "Sorry, there was an error uploading your file.";
-			$uploadOk = 0;
-		} 
-
-		// allow JPEG & PNG only
-		else {
-			$imageFileType = strtolower(pathinfo($photoFileName,PATHINFO_EXTENSION));
-			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-				echo "Sorry, there was an error uploading your file.";
-				$uploadOk = 0;
-			}
-		}
-
-		// allow <= 500 kB images only
-		if ($_FILES["selectedFile"]["size"] > 500000000) {
-			echo "Sorry, there was an error uploading your file.";
-			$uploadOk = 0;
-		} 
-
-		if ($uploadOk == 1) {
-			// upload
-			move_uploaded_file($_FILES["selectedFile"]["tmp_name"], $photoFileName);
-
 		// redefine the posted variables
 		$name = strtoupper($_POST['name']);
 		$id_num = strtoupper($_POST['id_num']);
 		$school = strtoupper($_POST['school']);
-		
+
 		// save the template to memory
 		$tag = imagecreatefromjpeg("assets/gen/card2.jpg");
-
-		// save the photo to memory
-		$imageInfo = getImageSize($photoFileName);
-		if ($imageInfo['mime'] == 'image/jpeg') {
-			$originalPhoto = imagecreatefromjpeg($photoFileName);
-		} else {
-			$originalPhoto = imagecreatefrompng($photoFileName);
-		}
-
-		// get image's width and height
-		$photoWidth = imagesx($originalPhoto);
-		$photoHeight = imagesy($originalPhoto);
-
-		// compute crop area
-		$startCropX = 0;
-		$startCropY = 0;
-		$photoSideLength = $photoWidth;
-		if ($photoWidth < $photoHeight) { // if the photo's portrait
-			$startCropY = $photoHeight / 2 - $photoWidth / 2;
-		} else if ($photoWidth > $photoHeight) { // if the photo's landscape
-			$startCropX = $photoWidth / 2 - $photoHeight / 2;
-			$photoSideLength = $photoHeight;
-		}
-
-		// create the resized and cropped photo
-		$croppedPhoto = imagecreatetruecolor(250, 250);
-		imagecopyresampled($croppedPhoto, $originalPhoto, 0, 0, $startCropX, $startCropY, 250, 250, $photoSideLength, $photoSideLength);
-
 
 		// set the font color
 		$black = ImageColorAllocate($tag, 10, 10, 10);
@@ -103,10 +46,6 @@ if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'
 			$schoolWidth = abs($schoolDimensions[4] - $schoolDimensions[0]);
 		}
 
-		// put the photo on the tag
-		imagecopymerge($tag,$croppedPhoto,55,365,0,0,250,250,100);
-
-
 		// put the name on the tag
 		imagefttext($tag,$nameFontSize,0,688,462,$black,'assets/gen/BebasNeue Regular.otf',$name);
 
@@ -123,9 +62,7 @@ if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'
 		// preview the created tag
 		echo '<center><img src="' . $createdTagFile . '"><br><br><i>(right click > save image as)</i><br><br><b>YOUR FILE WILL NOT BE PRESERVED  DUE TO PRIVACY CONCERNS</b>';
 
-		}
-} 
-	else {
-		echo "Sorry, there was an error processing your tag.";
-	}
+} else {
+	echo "Sorry, there was an error processing your tag.";
+}
 ?>

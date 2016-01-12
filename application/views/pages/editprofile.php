@@ -19,7 +19,7 @@
       }
 
       if(isset($_POST['asal'])) {  
-        $newnama = $_POST['asal'];
+        $newasal = $_POST['asal'];
         $flag = true;
       }
 
@@ -39,14 +39,14 @@
       }
 
       if ($flag) {
-        echo "yeey";
+        echo "yeey   ";
         $conn = connectDB();
         echo $newnama;
         echo $newasal;
         echo $newjurusan;
         echo $newemail;
         echo $newhp;
-        $sql = "UPDATE peserta SET asal = 'bingung' WHERE username = '$username'";
+        $sql = "UPDATE peserta SET nama = '$newnama', asal = '$newasal', jurusan = '$newjurusan', email = 'newemail', hp = '$newhp' WHERE username = '$username'";
         mysqli_query($conn, $sql);
       }   
      function connectDB() {
@@ -67,7 +67,7 @@
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             echo "loli";
-          $newnama = $row['nama'];
+          $namabaru = $row['nama'];
           $newasal = $row['asal'];
           $newjurusan = $row['jurusan'];
           $newemail = $row['email'];
@@ -90,9 +90,13 @@
   <div class = "container">
     <form class="form-signin" action = "" method = "POST">
           <h2 class="form-signin-heading">Edit Profile</h2>
-          <input name="nama" class="form-control" placeholder="Nama">          
+          <input name="nama" class="form-control" placeholder="Nama Woi">          
           <input name="asal" class="form-control" placeholder="Asal Sekolah">
-          <input name="jurusan" class="form-control" placeholder="Jurusan">
+          <select name="jurusan" required>
+            <option value="Saintek" > Saintek </option>
+            <option value="Soshum"> Soshum </option>
+            <option value="Campuran"> Campuran </option>
+          </select>
           <input type = "email" name="email" class="form-control" placeholder="Email">
           <input name="hp" class="form-control" placeholder="Nomor HP">
           <button class="btn btn-lg btn-primary btn-block" type="submit">Edit</button>

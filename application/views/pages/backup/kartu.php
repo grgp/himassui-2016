@@ -17,10 +17,6 @@
 				<br>
 				<input name="school" placeholder="e.g. SMAN 1 Jakarta" required type="text">
 				<br>
-				<input type="file" name="selectedFile">
-                <br>
-		    	<p>(photo must be in JPEG or PNG format and under 5 MB)</p>
-                <br>
 				<br><br>
 				<input class="btn btn-default" name="submit" type="submit" value="Submit">
 			</form>
