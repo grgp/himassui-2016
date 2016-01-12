@@ -75,9 +75,9 @@
   <div class = "container">
     <form class="form-signin" action = "" method = "POST">
           <h2 class="form-signin-heading">Edit Profile</h2>
-          <input name="oldpass" class="form-control" placeholder="Pasword Lama" required>          
-          <input name="newpass" class="form-control" placeholder="Password Baru" required>
-          <input name = "conpass" class="form-control" placeholder="Konfirmasi Password Baru" required>
+          <input name="oldpass" type="password" class="form-control" placeholder="Pasword Lama" required>          
+          <input name="newpass" type="password" class="form-control" placeholder="Password Baru" required>
+          <input name = "conpass" type="password" class="form-control" placeholder="Konfirmasi Password Baru" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Edit</button>
     </form>
      
