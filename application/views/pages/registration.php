@@ -5,25 +5,11 @@
       }
       $errormsg = "";    
       if(isset($_POST['username'])) {  
-        if (cekuser($_POST['username'])) {
-            $errormsg = "Username telah digunakan";
-        }
-        else if (!preg_match("/^[a-z]+$/", $_POST["username"])) {
-            $errormsg = "Username harus huruf kecil";
-        }
-        else if (!((preg_match("/^[a-z]+[0-9]+$/", $_POST["password"])) || (preg_match("/^[0-9]+[a-z]+$/", $_POST["password"]))) ){
-            $errormsg = "Password harus merupakan kombinasi huruf kecil dan angka";
-        }
-        else if (!preg_match("/^[0-9]+$/", $_POST["hp"])) {
-            $errormsg = "Nomor hp harus merupakan angka!";
-        }
-        else {
+        
           insertuser($_POST['username'], $_POST['password'], $_POST['nama'], $_POST['asal'], $_POST['email'], $_POST['hp'], $_POST['jurusan']);
-          session_start();
           $_SESSION['userlogin'] = $_POST['username'];
-           header("Location: home");
-        }
-      }
+          header("Location: home");
+       }
       function insertuser($username, $password, $nama, $asal, $email, $hp, $jurusan) {
         $conn = connectDB();
         $sql = "INSERT into peserta (username, password, nama, asal, email, hp, jurusan) VALUES('$username','$password', '$nama', '$asal', '$email', '$hp', '$jurusan')";
@@ -67,13 +53,11 @@
           <select name="jurusan" required>
             <option value="Saintek" > Saintek </option>
             <option value="Soshum"> Soshum </option>
-            <option value="Campuran"> Campuran </option>
           </select>
           <input type = "email" name="email" class="form-control" placeholder="Email" required>
           <input name="hp" class="form-control" placeholder="Nomor HP" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
         </form>
-        <span><?php echo $errormsg; ?> </span><br>
       </div>
     </div>
   </div>

@@ -2,53 +2,16 @@
     
     session_start();
       
-      $errormsg = "";
       $newnama = "";
       $newasal = "";
       $newjurusan = "";
       $newemail = "";
       $newhp = "";
-      $flag = false;
       $username = $_SESSION["userlogin"];
 
       getattribute($username);
 
-      if(isset($_POST['nama'])) {  
-        $newnama = $_POST['nama'];
-        $flag = true;
-      }
-
-      if(isset($_POST['asal'])) {  
-        $newasal = $_POST['asal'];
-        $flag = true;
-      }
-
-      if(isset($_POST['jurusan'])) {  
-        $newjurusan = $_POST['jurusan'];
-        $flag = true;
-      }
-
-      if(isset($_POST['email'])) {  
-        $newemail = $_POST['email'];
-        $flag = true;
-      }
-
-      if(isset($_POST['hp'])) {  
-        $newhp = $_POST['hp'];
-        $flag = true;
-      }
-
-      if ($flag) {
-        echo "yeey   ";
-        $conn = connectDB();
-        echo $newnama;
-        echo $newasal;
-        echo $newjurusan;
-        echo $newemail;
-        echo $newhp;
-        $sql = "UPDATE peserta SET nama = '$newnama', asal = '$newasal', jurusan = '$newjurusan', email = 'newemail', hp = '$newhp' WHERE username = '$username'";
-        mysqli_query($conn, $sql);
-      }   
+         
      function connectDB() {
         $servername = "localhost";
         $username = "root";
@@ -66,13 +29,56 @@
           $sql = "SELECT * FROM peserta WHERE username='$username'";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-            echo "loli";
-          $namabaru = $row['nama'];
+          $newnama = $row['nama'];
           $newasal = $row['asal'];
           $newjurusan = $row['jurusan'];
           $newemail = $row['email'];
           $newhp = $row['nama'];
+          $flag = false;
+          
+          if(isset($_POST['nama'])) {
+            if ($_POST['nama'] !== '') {
+              $newnama = $_POST['nama'];
+              $flag = true;
+             } 
           }
+
+          if(isset($_POST['asal'])) {
+            if ($_POST['asal'] !== '') {
+                $newasal = $_POST['asal'];
+                $flag = true;
+             }              
+          }
+
+          if(isset($_POST['jurusan'])) {  
+            if ($_POST['jurusan'] !== '') {
+                $newjurusan = $_POST['jurusan'];
+                $flag = true;
+             }  
+          }
+
+          if(isset($_POST['email'])) {  
+            if ($_POST['email'] !== '') {
+              $newemail = $_POST['email'];
+              $flag = true; 
+            }       
+          }
+
+          if(isset($_POST['hp'])) {
+            if ($_POST['hp'] !== '') {
+              $newhp = $_POST['hp'];
+              $flag = true;
+            }       
+          }
+
+          if ($flag) {
+           
+            $conn = connectDB();
+           
+            $sql = "UPDATE peserta SET nama = '$newnama', asal = '$newasal', jurusan = '$newjurusan', email = '$newemail', hp = '$newhp' WHERE username = '$username'";
+            mysqli_query($conn, $sql);
+          }
+        }
       }
 
   ?>
@@ -101,7 +107,7 @@
           <input name="hp" class="form-control" placeholder="Nomor HP">
           <button class="btn btn-lg btn-primary btn-block" type="submit">Edit</button>
     </form>
-     <span><?php echo $errormsg; ?> </span><br>
+     
   </div>
 </body>
 <script src = "script/jquery-2.1.4.min.js"> </script>
