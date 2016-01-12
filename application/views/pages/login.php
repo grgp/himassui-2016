@@ -55,28 +55,20 @@
         }
       }   
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>The Power Of Bootstrap</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type = "text/css" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type = "text/css" href="css/csssignin.css">
-</head>
+
 <body> 
-  <div class = "container">
-    <form class="form-signin" action = "" method = "POST">
-          <h2 class="form-signin-heading">Please sign in</h2>
-          <input name="username" class="form-control" placeholder="Username" required>
-          <input type="password" name="password" class="form-control" placeholder="Password" required>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
-          <a href = "registration.php"><button class="btn btn-lg btn-primary btn-block" type="button">Register</button></a>
-    </form>
-    
+  <div class="container">
+    <div class="panel panel-default logpanel center">
+      <div class="panel-body">
+        <form class="form-signin" action = "" method = "POST">
+              <h2 class="form-signin-heading">Please sign in</h2>
+              <input name="username" class="form-control" placeholder="Username" required>
+              <input type="password" name="password" class="form-control" placeholder="Password" required>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
+              <a href="registration.php"><button class="btn btn-lg btn-primary btn-block" type="button">Register</button></a>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
-<script src = "script/jquery-2.1.4.min.js"> </script>
-<script src = "bootstrap/js/bootstrap.min.js"> </script>
-<script src = "script/jsminimum.js"> </script>
 </html>

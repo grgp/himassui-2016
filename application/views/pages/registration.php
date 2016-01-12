@@ -52,21 +52,14 @@
           return false;
       }
 
-  ?>
+?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>The Power Of Bootstrap</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type = "text/css" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type = "text/css" href="css/csssignin.css">
-</head>
 <body> 
-  <div class = "container">
-    <form class="form-signin" action = "" method = "POST">
-          <h2 class="form-signin-heading">Please insert your username and password</h2>
+  <div class="container">
+    <div class="panel panel-default logpanel center">
+      <div class="panel-body">
+        <form class="form-signin" action = "" method = "POST">
+          <h2 class="form-signin-heading">Daftar Akun</h2>
           <input name="username" class="form-control" placeholder="Username" required>
           <input type="password" name="password" class="form-control" placeholder="Password" required>
           <input name="nama" class="form-control" placeholder="Nama" required>          
@@ -79,8 +72,10 @@
           <input type = "email" name="email" class="form-control" placeholder="Email" required>
           <input name="hp" class="form-control" placeholder="Nomor HP" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-    </form>
-     <span><?php echo $errormsg; ?> </span><br>
+        </form>
+        <span><?php echo $errormsg; ?> </span><br>
+      </div>
+    </div>
   </div>
 </body>
 <script src = "script/jquery-2.1.4.min.js"> </script>
