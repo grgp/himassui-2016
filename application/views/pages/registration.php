@@ -23,9 +23,9 @@
         mysqli_query($conn, $sql);
       }   
      function connectDB() {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "103.53.198.227:21";
+        $username = "himassui_akbar";
+        $password = "akbar41";
         $dbname = "himassui_to2016";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         if (!$conn) {
