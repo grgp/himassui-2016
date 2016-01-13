@@ -43,15 +43,14 @@ if(!isset($_SESSION["userlogin"])){
 
   ?>
 
-<body> 
   <div class="container">
     <div class="panel panel-default profpanel center"> 
       <div class="panel-body">
         <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">Profile</a></li>
+          <li role="presentation" class="active"><a href="profile">Profile</a></li>
           <li role="presentation"><a href="editprofile">Edit Profile</a></li>
           <li role="presentation"><a href="changepassword">Ganti Password</a></li>
-          <li role="presentation"><a href="kartu">Upload Foto Pembayaran</a></li>
+          <li role="presentation"><a href="buktipembayaran">Upload Foto Pembayaran</a></li>
         </ul>
         <div class="profdetails">
         <h2 class="form-signin-heading">Profile Anda</h2>
@@ -83,15 +82,3 @@ if(!isset($_SESSION["userlogin"])){
       </div>
     </div>
   </div>
-
-
-- Profile
-- edit profile
-- change password
-- upload foto pembayaran
-
-</body>
-<script src = "script/jquery-2.1.4.min.js"> </script>
-<script src = "bootstrap/js/bootstrap.min.js"> </script>
-<script src = "script/jsminimum.js"> </script>
-</html>

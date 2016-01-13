@@ -83,9 +83,16 @@
 
   ?>
 
-<body> 
   <div class = "container">
-    <form class="form-signin" action = "" method = "POST">
+  	<div class="panel panel-default profpanel center"> 
+      <div class="panel-body">
+      	<ul class="nav nav-tabs">
+          <li role="presentation"><a href="profile">Profile</a></li>
+          <li role="presentation" class="active"><a href="editprofile">Edit Profile</a></li>
+          <li role="presentation"><a href="changepassword">Ganti Password</a></li>
+          <li role="presentation"><a href="buktipembayaran">Upload Foto Pembayaran</a></li>
+        </ul>
+    		<form class="form-signin" action = "" method = "POST">
           <h2 class="form-signin-heading">Edit Profile</h2>
           <input name="nama" class="form-control" placeholder="Nama">          
           <input name="asal" class="form-control" placeholder="Asal Sekolah">
@@ -97,12 +104,7 @@
           <input type = "email" name="email" class="form-control" placeholder="Email">
           <input name="hp" class="form-control" placeholder="Nomor HP">
           <button class="btn btn-lg btn-primary btn-block" type="submit">Edit</button>
-    </form>
-     
+    		</form>
+    	</div>
+    </div>
   </div>
-
-</body>
-<script src = "script/jquery-2.1.4.min.js"> </script>
-<script src = "bootstrap/js/bootstrap.min.js"> </script>
-<script src = "script/jsminimum.js"> </script>
-</html>

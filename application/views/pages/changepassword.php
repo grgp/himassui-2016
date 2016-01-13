@@ -63,19 +63,22 @@
 
   ?>
 
-<body> 
   <div class = "container">
-    <form class="form-signin" action = "" method = "POST">
-          <h2 class="form-signin-heading">Edit Profile</h2>
+    <div class="panel panel-default profpanel center"> 
+      <div class="panel-body">
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="profile">Profile</a></li>
+          <li role="presentation"><a href="editprofile">Edit Profile</a></li>
+          <li role="presentation" class="active"><a href="changepassword">Ganti Password</a></li>
+          <li role="presentation"><a href="buktipembayaran">Upload Foto Pembayaran</a></li>
+        </ul>
+        <form class="form-signin" action = "" method = "POST">
+          <h2 class="form-signin-heading">Ganti Password</h2>
           <input name="oldpass" type="password" class="form-control" placeholder="Pasword Lama" required>          
           <input name="newpass" type="password" class="form-control" placeholder="Password Baru" required>
           <input name = "conpass" type="password" class="form-control" placeholder="Konfirmasi Password Baru" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Edit</button>
-    </form>
-     
+        </form>
+      </div>
+    </div>
   </div>
-</body>
-<script src = "script/jquery-2.1.4.min.js"> </script>
-<script src = "bootstrap/js/bootstrap.min.js"> </script>
-<script src = "script/jsminimum.js"> </script>
-</html>
