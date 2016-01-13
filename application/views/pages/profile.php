@@ -66,17 +66,33 @@ if(!isset($_SESSION["userlogin"])){
           $hp = $row['hp'];
 
             if ($row['status'] === '0') {
-              $status = 'belum bayar';
+              $status = 'belum membayar';
               $nomorujian = '-';
             }
+            else {
+              $status = 'sudah membayar';
+              if ($row['jurusan'] === 'Saintek' ) {
+                $kode = '01';
+              }
+              else {
+                $kode = '02';
+              }
+              $nomorujian = '13'.$kode.$row['tipesoal'].$row['nomorujian'];
+            }
           }
-          echo "<h4>Nama: ".$nama."</h4>";
-          echo "<h4>Asal: ".$asal."</h4>";
-          echo "<h4>Jurusan: ".$jurusan."</h4>";
-          echo "<h4>Email: ".$email."</h4>";
-          echo "<h4>No. HP: ".$hp."</h4>";
-          echo "<h4>Status: ".$status."</h4>";
-          echo "<h4>No. Ujian: ".$nomorujian."</h4>";
+          echo "<h4>Nama                   : ".$nama."</h4>";
+          echo "<h4>Asal Sekolah           : ".$asal."</h4>";
+          echo "<h4>Pilihan Kelompok Ujian : ".$jurusan."</h4>";
+          echo "<h4>Email                  : ".$email."</h4>";
+          echo "<h4>No. HP                 : ".$hp."</h4>";
+          echo "<h4>Status Pembayaran      : ".$status."</h4>";
+          echo "<h4>No. Ujian              : ".$nomorujian."</h4>";
+          if ($nomorujian !== '-') {
+            echo "<a href='kartu' class='btn btn-danger' role='button'>Cetak Kartu Peserta</a>";
+          }
+          else {
+             echo "<a href='#' class='btn btn-link' role='button' disabled> Cetak Kartu Peserta</a>";
+          }
           ?>
         </div>
       </div>

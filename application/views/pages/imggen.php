@@ -1,8 +1,23 @@
 <?php
-
+		
 		/* * * * * * * * * * * * * *
 		 * IMAGE PROCESSING SCRIPT *
 		 * * * * * * * * * * * * * */
+		if(!isset($_SESSION["userlogin"])){
+         // header('Location: http://www.himassui.com/UIGTB2016/index.html');
+        header('Location: home');
+        }
+        $username = $_SESSION["userlogin"];  
+		$conn = connectDB();
+		$sql = "SELECT * FROM peserta WHERE username='$username'";
+		$idpeserta = "";
+		$result = mysqli_query($conn, $sql);
+		if(mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+	        if ($row['status'] === '0') {
+	          header("Location: home");
+	        }
+    	}
 		function connectDB() {
         $servername = "localhost";
         $username = "root";

@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_SESSION["userlogin"])){
+        header("Location: home");
+      } 
   function connectDB() {
           $servername = "localhost";
           $username = "root";
@@ -52,8 +55,9 @@ if ($uploadOk == 0) {
 } else {
     $target_file = $target_dir . "bukti.jpeg";
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "<br><br><br><br><br><br><br>";
-        echo "<center> The file has been uploaded </center>";
+        echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+        echo "<center> The file has been uploaded </center><br><br>";
+        echo "<center><a href='profile' class='btn btn-link' role='button'> Kembali ke Halaman Profile</a></center>";
         echo "<br><br><br><br><br><br><br>";
     } else {
         echo "Sorry, there was an error uploading your file.";

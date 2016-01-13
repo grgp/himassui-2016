@@ -1,3 +1,9 @@
+<?php 
+  if(!isset($_SESSION["userlogin"])){
+         // header('Location: http://www.himassui.com/UIGTB2016/index.html');
+        header('Location: home');
+    }
+?>
 <div class="container">
     <div class="panel panel-default profpanel center"> 
       <div class="panel-body">

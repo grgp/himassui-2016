@@ -17,9 +17,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a class="page-scroll" href="home">HOME</a></li>
-          <li><a class="page-scroll" href="#about">ABOUT</a></li>
+          <?php
+            if(!isset($_SESSION["userlogin"])) {
+              echo '<li><a class="page-scroll" href="#about">ABOUT</a></li>';
+              echo '<li><a class="page-scroll" href="#contact">CONTACT</a></li>';
+            }
+          ?>
           <li><a class="page-scroll" href="faq">FAQ</a></li>
-          <li><a class="page-scroll" href="#contact">CONTACT</a></li>
           <?php
             if(!isset($_SESSION["userlogin"])) {
               echo '<li><a class="page-scroll" href="registration">Register</a></li>';

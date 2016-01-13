@@ -2,7 +2,15 @@
     if(isset($_SESSION["userlogin"])){
         header("Location: home");
       }
-      $errormsg = "";    
+      $conn = connectDB();
+      $sql = "SELECT * FROM peserta ORDER BY nomorujian DESC";
+      $result = mysqli_query($conn, $sql);
+      if(mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        if ($row['nomorujian'] >= '1500') {
+          header("Location: home");
+        }
+      }    
       if(isset($_POST['username'])) {  
         
           insertuser($_POST['username'], $_POST['password'], $_POST['nama'], $_POST['asal'], $_POST['email'], $_POST['hp'], $_POST['jurusan']);
