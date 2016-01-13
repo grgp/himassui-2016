@@ -1,6 +1,9 @@
 	<aside class="bg-dark">
     <div class="container text-center">
-          <p>Copyright 2016<br>made by Akbar Septriyan and George Pitoy</p>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h2 class="section-heading">Placed Reserved For Sponsors and Media Partners</h2>
+      <hr class="primary">
+      </div>
     </div>
   </aside>
 

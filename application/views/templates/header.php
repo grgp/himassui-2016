@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
 <html lang="en">
 <head>
@@ -9,7 +12,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/creative.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/override.css"/>
+
+	<?php
+  	if ( $title != "Home" ) {
+			echo '<link rel="stylesheet" type="text/css" href="assets/css/override.css"/>';
+		}
+	?>
 
 	<script src="assets/js/bootstrap.js"></script>
 	
