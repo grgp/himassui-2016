@@ -43,19 +43,18 @@ if(!isset($_SESSION["userlogin"])){
 
   ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>The Power Of Bootstrap</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type = "text/css" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type = "text/css" href="css/csssignin.css">
-</head>
 <body> 
-  <div class = "container">
-    <form class="form-signin" action = "" method = "POST">
-          <h2 class="form-signin-heading">Your Profile</h2>
+  <div class="container">
+    <div class="panel panel-default profpanel center"> 
+      <div class="panel-body">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#">Profile</a></li>
+          <li role="presentation"><a href="editprofile">Edit Profile</a></li>
+          <li role="presentation"><a href="changepassword">Ganti Password</a></li>
+          <li role="presentation"><a href="kartu">Upload Foto Pembayaran</a></li>
+        </ul>
+        <div class="profdetails">
+        <h2 class="form-signin-heading">Profile Anda</h2>
           <?php 
           $conn = connectDB();
           $sql = "SELECT * FROM peserta WHERE username='$username'";
@@ -72,17 +71,25 @@ if(!isset($_SESSION["userlogin"])){
               $nomorujian = '-';
             }
           }
-          echo "<h2> Nama :".$nama."</h2>";
-          echo "<h2> Asal :".$asal."</h2>";
-          echo "<h2>".$jurusan."</h2>";
-          echo "<h2>".$email."</h2>";
-          echo "<h2>".$hp."</h2>";
-          echo "<h2>".$status."</h2>";
-          echo "<h2>".$nomorujian."</h2>";
+          echo "<h4>Nama: ".$nama."</h4>";
+          echo "<h4>Asal: ".$asal."</h4>";
+          echo "<h4>Jurusan: ".$jurusan."</h4>";
+          echo "<h4>Email: ".$email."</h4>";
+          echo "<h4>No. HP: ".$hp."</h4>";
+          echo "<h4>Status: ".$status."</h4>";
+          echo "<h4>No. Ujian: ".$nomorujian."</h4>";
           ?>
-    </form>
-     
+        </div>
+      </div>
+    </div>
   </div>
+
+
+- Profile
+- edit profile
+- change password
+- upload foto pembayaran
+
 </body>
 <script src = "script/jquery-2.1.4.min.js"> </script>
 <script src = "bootstrap/js/bootstrap.min.js"> </script>

@@ -50,11 +50,36 @@ html, body {
 }
 */
 
+/*....... TABS  .......*/
+.nav-tabs li a {
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.nav-tabs > li>a,
+.nav-tabs > li>a:focus {
+    color: #f05f40;
+}
+
+.nav-tabs > li>a:hover,
+.nav-tabs >li>a:focus:hover {
+    color: #00ccff;
+    background-color: #f9f9f9;
+}
+
 /*....... FORMS .......*/
 
 .logpanel {
   margin-top: 90px;
   max-width: 600px;
+}
+
+.profpanel {
+  margin-top: 90px;
+  max-width: 800px;
+}
+
+.profdetails {
+  margin: 20px 10px 10px 10px;
 }
 
 .form-signin {
