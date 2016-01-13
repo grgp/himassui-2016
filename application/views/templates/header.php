@@ -13,6 +13,12 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="assets/css/creative.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css"/>
 
+	<?php
+  	if ( $title != "Home" ) {
+			echo '<link rel="stylesheet" type="text/css" href="assets/css/override.css"/>';
+		}
+	?>
+
 	<script src="assets/js/bootstrap.js"></script>
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>

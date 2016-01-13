@@ -1,9 +1,9 @@
 	<aside class="bg-dark">
     <div class="container text-center">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Placed Reserved For Sponsors and media partners</h2>
-          <hr class="primary">
-        </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h2 class="section-heading">Placed Reserved For Sponsors and Media Partners</h2>
+      <hr class="primary">
+      </div>
     </div>
   </aside>
 
@@ -19,7 +19,13 @@
   <script src="assets/js/wow.min.js"></script>
 
   <!-- Custom Theme JavaScript -->
-  <script src="assets/js/creative.js"></script>
+  <?php
+  if ( basename($_SERVER['PHP_SELF']) == "index.php" ) {
+  	echo '<script src="assets/js/creative.js"></script>';
+  } else {
+  	echo '<script src="assets/js/creative.off.js"></script>';
+  }
+  ?>
 
 </body>
 </html>
