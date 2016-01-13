@@ -1,9 +1,8 @@
 	<aside class="bg-dark">
     <div class="container text-center">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <h2 class="section-heading">Placed Reserved For Sponsors and media partners</h2>
           <hr class="primary">
-          <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
         </div>
     </div>
   </aside>

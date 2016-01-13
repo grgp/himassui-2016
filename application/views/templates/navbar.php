@@ -25,7 +25,7 @@
               echo '<li><a class="page-scroll" href="registration">Register</a></li>';
               echo '<li><a class="page-scroll" href="login">Login</a></li>';
             } else {
-              echo '<li><a class="page-scroll" href="editprofile">Edit Profile</a></li>';
+              echo '<li><a class="page-scroll" href="Profile">Profile</a></li>';
               echo '<li><a class="page-scroll" href="logout">Logout</a></li>';
             }
           ?>

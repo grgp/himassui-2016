@@ -1,6 +1,4 @@
 <?php 
-   session_start();
-   
    function connectDB() {
         $servername = "localhost";
         $username = "root";

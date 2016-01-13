@@ -1,5 +1,4 @@
 <?php
-    session_start();
     if(isset($_SESSION["userlogin"])){
         header("Location: home");
       }
@@ -50,7 +49,8 @@
           <input type="password" name="password" class="form-control" placeholder="Password" required>
           <input name="nama" class="form-control" placeholder="Nama" required>          
           <input name="asal" class="form-control" placeholder="Asal Sekolah" required>
-          <select name="jurusan" required>
+           <label for="jurusan">Pilihan Kelompok Ujian:</label>
+          <select name="jurusan" class="form-control" required>
             <option value="Saintek" > Saintek </option>
             <option value="Soshum"> Soshum </option>
           </select>
