@@ -1,7 +1,8 @@
 <?php
-    
-    session_start();
       
+      if(!isset($_SESSION["userlogin"])){
+        header("Location: home");
+      }
       $oldpassword = "";
       $newpassword = "";
       $username = $_SESSION["userlogin"];

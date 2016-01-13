@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION["userlogin"])){
+        header("Location: home");
+      }
       $nama = "";
       $asal = "";
       $jurusan = "";

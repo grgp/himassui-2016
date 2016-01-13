@@ -1,7 +1,7 @@
 <?php
-    
-    session_start();
-      
+      if(!isset($_SESSION["userlogin"])){
+        header("Location: home");
+      }
       $newnama = "";
       $newasal = "";
       $newjurusan = "";
@@ -96,12 +96,12 @@
   <div class = "container">
     <form class="form-signin" action = "" method = "POST">
           <h2 class="form-signin-heading">Edit Profile</h2>
-          <input name="nama" class="form-control" placeholder="Nama Woi">          
+          <input name="nama" class="form-control" placeholder="Nama">          
           <input name="asal" class="form-control" placeholder="Asal Sekolah">
-          <select name="jurusan" required>
+          <label for="jurusan">Pilihan Kelompok Ujian:</label>
+          <select name="jurusan" class="form-control" required>
             <option value="Saintek" > Saintek </option>
             <option value="Soshum"> Soshum </option>
-            <option value="Campuran"> Campuran </option>
           </select>
           <input type = "email" name="email" class="form-control" placeholder="Email">
           <input name="hp" class="form-control" placeholder="Nomor HP">
