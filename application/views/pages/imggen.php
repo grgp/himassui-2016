@@ -1,9 +1,36 @@
 <?php
-if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'])) { // ensure fields aren't empty
 
 		/* * * * * * * * * * * * * *
 		 * IMAGE PROCESSING SCRIPT *
 		 * * * * * * * * * * * * * */
+		function connectDB() {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "himassui_to2016";
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        return $conn;
+     	}
+     	  $username = $_SESSION["userlogin"];
+          $conn = connectDB();
+          $sql = "SELECT * FROM peserta WHERE username='$username'";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+          		$kode = "";
+          		if ($row['jurusan'] === "Saintek") {
+          			$kode = '01';
+          		}
+          		else {
+          			$kode = '02';
+          		}
+          		$temp = '13'.$kode.$row['tipesoal'].$row['nomorujian'];
+        		$name = strtoupper($row['nama']);
+				$id_num = strtoupper($temp);
+				$school = strtoupper($row['asal']);  	
+          }
 
 		$photoFileName = "tmp/" . basename($_FILES["selectedFile"]["name"]);
 		$uploadOk = 1;
@@ -35,9 +62,7 @@ if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'
 			move_uploaded_file($_FILES["selectedFile"]["tmp_name"], $photoFileName);
 
 		// redefine the posted variables
-		$name = strtoupper($_POST['name']);
-		$id_num = strtoupper($_POST['id_num']);
-		$school = strtoupper($_POST['school']);
+		
 		
 		// save the template to memory
 		$tag = imagecreatefromjpeg("assets/gen/card2.jpg");
@@ -124,7 +149,7 @@ if (!empty($_POST['name']) && !empty($_POST['id_num']) && !empty($_POST['school'
 		echo '<center><img src="' . $createdTagFile . '"><br><br><i>(right click > save image as)</i><br><br><b>YOUR FILE WILL NOT BE PRESERVED  DUE TO PRIVACY CONCERNS</b>';
 
 		}
-} 
+ 
 	else {
 		echo "Sorry, there was an error processing your tag.";
 	}
