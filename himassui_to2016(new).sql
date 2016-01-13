@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 12 Jan 2016 pada 16.15
+-- Generation Time: 13 Jan 2016 pada 15.27
 -- Versi Server: 10.0.17-MariaDB
 -- PHP Version: 5.5.30
 
@@ -37,18 +37,20 @@ CREATE TABLE `peserta` (
   `hp` varchar(15) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0',
   `bukti` varchar(50) NOT NULL,
-  `nomorujian` int(30) NOT NULL
+  `nomorujian` int(30) NOT NULL,
+  `tipesoal` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `peserta`
 --
 
-INSERT INTO `peserta` (`id`, `username`, `password`, `nama`, `asal`, `jurusan`, `email`, `hp`, `status`, `bukti`, `nomorujian`) VALUES
-(1, 'master', 'master', 'master akbar', 'master akbar', '', 'master', '8', 0, '', 0),
-(2, 'himassui', 'kobinasi11', 'A', 'asalbaru', 'Saintek', 'emailbaru@gmail.com', '2147483647', 0, '', 0),
-(3, 'himassuijancog', 'kobinasi121', 'nama', 'asalbaru', 'Saintek', 'emailbaru@gmail.com', '2147483647', 0, '', 0),
-(4, 'akbar', 'akbarrr1', 'akabrz', 'asalz', 'Saintek', 'email@gmail.com', '08121444495', 0, '', 0);
+INSERT INTO `peserta` (`id`, `username`, `password`, `nama`, `asal`, `jurusan`, `email`, `hp`, `status`, `bukti`, `nomorujian`, `tipesoal`) VALUES
+(1, 'master', 'master', 'master akbar', 'master akbar', 'Soshum', 'master', '8', 0, '', 1003, 2),
+(2, 'himassui', 'kobinasi11', 'A', 'asalbaru', 'Saintek', 'emailbaru@gmail.com', '2147483647', 0, '', 1004, 1),
+(3, 'himassuijancog', 'kobinasi121', 'nama', 'asalbaru', 'Saintek', 'emailbaru@gmail.com', '2147483647', 0, '', 1001, 2),
+(4, 'akbar', 'pass', 'akabrz', 'asalz', 'Soshum', 'email@gmail.com', '08121444495', 0, '', 1002, 1),
+(5, 'akbar2', 'akbar', 'akbar', 'SMA 1 Pemali', 'Saintek', 'septriyan.akbar@gmail.com', '08121444499', 1, '', 1005, 2);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +70,7 @@ ALTER TABLE `peserta`
 -- AUTO_INCREMENT for table `peserta`
 --
 ALTER TABLE `peserta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
