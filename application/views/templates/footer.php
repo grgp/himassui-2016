@@ -1,10 +1,6 @@
 	<aside class="bg-dark">
     <div class="container text-center">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
-          <hr class="primary">
-          <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-        </div>
+          <p>Copyright 2016<br>made by Akbar Septriyan and George Pitoy</p>
     </div>
   </aside>
 
@@ -20,7 +16,13 @@
   <script src="assets/js/wow.min.js"></script>
 
   <!-- Custom Theme JavaScript -->
-  <script src="assets/js/creative.js"></script>
+  <?php
+  if ( basename($_SERVER['PHP_SELF']) == "index.php" ) {
+  	echo '<script src="assets/js/creative.js"></script>';
+  } else {
+  	echo '<script src="assets/js/creative.off.js"></script>';
+  }
+  ?>
 
 </body>
 </html>
