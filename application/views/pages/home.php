@@ -9,18 +9,20 @@
     </div>
   </header>
 
-  <section class="bg-primary" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Apa itu ...?</h2>
-          <hr class="light">
-          <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-          <a href="#" class="btn btn-default btn-xl">Daftar Sekarang!</a>
+ <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h1>Are You Ready ?</h1>
+                    <h2 class="section-heading">We are Looking for <span class = "yellowjacket">the next yellow jackets!</span></h2>
+                    <hr class="light"> <br>
+                    <p >UI GOES TO BANGKA 2016 yang digagas oleh Himpunan Mahasiswa Serumpun Sebalai Universitas Indonesia (HIMASS UI) bertujuan memberikan wawasan mengenai kehidupan perkuliahan, berbagai program studi beserta jalur masuk dan beasiswa yang disediakan oleh perguruan tinggi, khususnya Universitas Indonesia melalui rangkaian acara yang menarik dan memotivasi diselingi sharing pengalaman yang inspiratif. Selain itu, kegiatan ini juga menjadi ajang pembuktian kontribusi dan pengabdian para mahasiswa Universitas Indonesia asal Bangka Belitung untuk daerah asalnya.</p><br>
+                    <a href="register"class="btn btn-primary btn-xl page-scroll" target="_blank">Registration is Open Now !</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
 
   <section id="services">
     <div class="container">
@@ -64,3 +66,109 @@
       </div>
     </div>
   </section>
+
+<section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/1.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="assets/img/portfolio/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>

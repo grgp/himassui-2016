@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    /*max-width: 50px;*/
     border-color: #f05f40;
     border-width: 3px;
 }
@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: blue;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -33,7 +33,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: #00ccff;
 }
 
 h1,
@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #00ccff;
 }
 
 .bg-dark {
@@ -94,7 +94,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #00ccff;
 }
 
 .navbar-default .nav > li>a,
@@ -102,17 +102,17 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: #00ccff;
 }
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #00ccff;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: #00ccff!important;
     background-color: transparent;
 }
 
@@ -133,7 +133,7 @@ aside {
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
+        color: #00ccff;
     }
 
     .navbar-default .nav > li>a,
@@ -143,7 +143,7 @@ aside {
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: #00ccff;
     }
 
     .navbar-default.affix {
@@ -168,7 +168,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: #00ccff;
     }
 }
 
@@ -473,4 +473,7 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+.yellowjacket{
+    color: yellow;
 }

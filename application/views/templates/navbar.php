@@ -10,14 +10,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand page-scroll" href="#page-top">HIMASSUI2016</a>
+        <a class="navbar-brand page-scroll" href="#page-top">UI GOES TO BANGKA</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="page-scroll" href="about">Panduan</a></li>
-          <li><a class="page-scroll" href="kartu">Buat Kartu</a></li>
+          <li><a class="page-scroll" href="home">HOME</a></li>
+          <li><a class="page-scroll" href="#about">ABOUT</a></li>
+          <li><a class="page-scroll" href="faq">FAQ</a></li>
+          <li><a class="page-scroll" href="#contact">CONTACT</a></li>
           <?php
             if(!isset($_SESSION["userlogin"])) {
               echo '<li><a class="page-scroll" href="registration">Register</a></li>';

@@ -72,8 +72,8 @@
               $nomorujian = '-';
             }
           }
-          echo "<h2>".$nama."</h2>";
-          echo "<h2>".$asal."</h2>";
+          echo "<h2> Nama :".$nama."</h2>";
+          echo "<h2> Asal :".$asal."</h2>";
           echo "<h2>".$jurusan."</h2>";
           echo "<h2>".$email."</h2>";
           echo "<h2>".$hp."</h2>";
