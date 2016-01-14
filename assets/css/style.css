@@ -104,3 +104,19 @@ html, body {
   padding-top:0px;
   background-color: #337AB7;
 }
+
+aside .img-responsive {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0px 15px;
+}
+
+aside .medpar img {
+  margin: 0px 5px;
+  max-width: 100px;
+}
+
+.sponsor {
+  margin-bottom: 25px;
+}
