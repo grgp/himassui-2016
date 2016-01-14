@@ -1,8 +1,18 @@
 	<aside class="bg-dark">
-    <div class="container text-center">
+    <div class="container text-center" id="bawah">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-      <h2 class="section-heading">Placed Reserved For Sponsors and Media Partners</h2>
+      <h2 class="section-heading">Sponsored By</h2>
       <hr class="primary">
+      <img src="assets/img/bi.png" class="img-responsive" alt="" width = "500px">
+      <img src="assets/img/sumsel.png" class="img-responsive" alt="" width = "500px">
+      <h2 class="section-heading">Media Partners</h2>
+      <hr class="primary">
+      <span>
+      <img src="assets/img/rri.png" class="img-responsive" alt="" width = "100px">
+      <img src="assets/img/bt.jpeg" class="img-responsive" alt="" width = "100px">
+      <img src="assets/img/jess.png" class="img-responsive" alt="" width = "100px">
+      <img src="assets/img/sono.png" class="img-responsive" alt="" width = "100px">
+      </span>
       </div>
     </div>
   </aside>

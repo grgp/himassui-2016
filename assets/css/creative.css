@@ -477,3 +477,16 @@ body {
 .yellowjacket{
     color: yellow;
 }
+#about {
+     max-height: 650px;
+}
+#contact {
+    padding-top: 10px;       
+}
+#sial {
+    max-height: 50px;   
+}
+#bawah {
+    max-height: 100px;
+    display: inline;   
+}
